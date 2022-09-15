@@ -140,7 +140,7 @@ mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true,
     useFindAndModify: false,
 }).then((connected) => {
-    const server = app.listen(4343);
+    const server = app.listen(  );
      const io = require('./socket').init(server);
 
     io.on('connection', (connection) => {
@@ -172,4 +172,5 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 }).catch((err) =>{
     console.log(err);
+    
 })
